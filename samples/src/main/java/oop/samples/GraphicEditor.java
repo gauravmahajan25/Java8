@@ -11,18 +11,18 @@ public class GraphicEditor {
 	 * Drawing shape based on the type passed.
 	 * @param shape
 	 */
-	public void drwaingShape(Shape shape) {
+	public void drawingShape(Shape shape) {
 		shape.draw();
 	}
 	
 	public static void main(String[] args) {
-		GraphicEditor editor = new GraphicEditor();
+		final GraphicEditor editor = new GraphicEditor();
 		
-		Circle circle = new Circle();
-		editor.drwaingShape(circle);
+		final Circle circle = new Circle();
+		editor.drawingShape(circle);
 		
-		Triangle triangle = new Triangle();
-		editor.drwaingShape(triangle);		
+		final Triangle triangle = new Triangle();
+		editor.drawingShape(triangle);		
 	}
 
 }

@@ -6,14 +6,14 @@ import java.util.List;
 public class CompareApple {
 	
 	public static void main(String [] args) {
-		List <Apple> appleList = getApples();
-		appleList.sort((a1, a2) -> a1.getWeight().compareTo(a2.getWeight()));
-		for (Apple apple : appleList) {
+		final CompareApple testCompare = new CompareApple();
+		testCompare.sortApple(testCompare.getApples());
+		for (Apple apple : testCompare.getApples()) {
 			System.out.println(apple.getWeight());
 		}
 	}
 
-	private static List<Apple> getApples() {
+	public List<Apple> getApples() {
 		Apple a0 = new Apple();
 		a0.setWeight(10);
 		Apple a1 = new Apple();
@@ -26,6 +26,11 @@ public class CompareApple {
 		appleList.add(a1);
 		appleList.add(a2);
 		
+		return appleList;
+	}
+	
+	public List <Apple> sortApple(List <Apple> appleList) {
+		appleList.sort((a1, a2) -> a1.getWeight().compareTo(a2.getWeight()));
 		return appleList;
 	}
 

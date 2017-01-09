@@ -6,5 +6,4 @@ public class Triangle implements Shape {
 		System.out.println("Drawing Triangle");
 
 	}
-
 }

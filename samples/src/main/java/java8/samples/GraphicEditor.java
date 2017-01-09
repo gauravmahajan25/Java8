@@ -11,17 +11,17 @@ public class GraphicEditor {
 	 * Method to draw shape based on the behavior passed. 
 	 * @param shape
 	 */
-	public void drwaingShape(Shape shape) {
+	public void drawingShape(Shape shape) {
 		shape.draw();
 	}
 	
 	public static void main(String[] args) {
-		GraphicEditor editor = new GraphicEditor();
+		final GraphicEditor editor = new GraphicEditor();
 		
-		Shape circle = () -> System.out.println("Drawing Circle using Lambda");
-		editor.drwaingShape(circle);
+		final Shape circle = () -> System.out.println("Drawing Circle using Lambda");
+		editor.drawingShape(circle);
 		
-		editor.drwaingShape(() -> System.out.println("Drawing Triangle using Lambda"));		
+		editor.drawingShape(() -> System.out.println("Drawing Triangle using Lambda"));		
 	}
 
 }
